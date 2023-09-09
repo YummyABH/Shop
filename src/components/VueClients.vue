@@ -1,7 +1,7 @@
 <script>
 import ClientLogo from './ClientLogo.vue'
 
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
         }
@@ -10,38 +10,38 @@ export default (await import('vue')).defineComponent({
     components: {
         ClientLogo,
     }
-})
+}
 </script>
 
 <template>
     <div class="VueClients">
-        <div class="wrapper">
-            <div class="container">
-                <div class="info">
-                    <h1 class="info-title">Почему именно мы?</h1>
-                    <div class="info-text">
-                        <span class="info-text-top">
-                            За долгое время работы в этой области у нас более одной тысячи клиентов в базе в
-                            том числе и представленные выше. В основном это компании по переработке вторсырья.
-                        </span>
-                        <span class="info-text-bottom">
-                            Мы уже прошли тот
-                            путь который вам предстоит пройти после приобретения нашей продукции и лучше подскажем: что вам
-                            лучше подойдет, чего надо избегать и как более эффективно использовать то что есть.
-                        </span>
-                    </div>
-                </div>
 
-                <div class="flex-container">
-                    <ClientLogo urlLogo="/src/assets/Clients/logo.png"/>
-                    <ClientLogo urlLogo="/src/assets/Clients/Group1.png"/>
-                    <ClientLogo urlLogo="/src/assets/Clients/firm.png"/>
-                    <ClientLogo urlLogo="/src/assets/Clients/Group2.png"/>
-                    <ClientLogo urlLogo="/src/assets/Clients/Group3.png"/>
-                    <ClientLogo urlLogo="/src/assets/Clients/fr.png"/>
+        <div class="container">
+            <div class="info">
+                <h1 class="info-title">Почему именно мы?</h1>
+                <div class="info-text">
+                    <span class="info-text-top">
+                        За долгое время работы в этой области у нас более одной тысячи клиентов в базе в
+                        том числе и представленные выше. В основном это компании по переработке вторсырья.
+                    </span>
+                    <span class="info-text-bottom">
+                        Мы уже прошли тот
+                        путь который вам предстоит пройти после приобретения нашей продукции и лучше подскажем: что вам
+                        лучше подойдет, чего надо избегать и как более эффективно использовать то что есть.
+                    </span>
                 </div>
             </div>
+
+            <div class="flex-container">
+                <ClientLogo urlLogo="/src/assets/Clients/logo.png" />
+                <ClientLogo urlLogo="/src/assets/Clients/Group1.png" />
+                <ClientLogo urlLogo="/src/assets/Clients/firm.png" />
+                <ClientLogo urlLogo="/src/assets/Clients/Group2.png" />
+                <ClientLogo urlLogo="/src/assets/Clients/Group3.png" />
+                <ClientLogo urlLogo="/src/assets/Clients/fr.png" />
+            </div>
         </div>
+
     </div>
 </template>
 
@@ -49,12 +49,6 @@ export default (await import('vue')).defineComponent({
 .VueClients {
     width: 100%;
     margin: 120px 0px;
-}
-
-.wrapper {
-    max-width: 1200px;
-    padding: 0px 40px;
-    margin: 0 auto;
 }
 
 .container {
@@ -134,9 +128,6 @@ export default (await import('vue')).defineComponent({
         width: 100%;
         margin: 100px 0px;
     }
-    .wrapper {
-        padding: 0px 72px;
-    }
 }
 
 /*--------------660px--------*/
@@ -144,9 +135,6 @@ export default (await import('vue')).defineComponent({
     .VueClients {
         width: 100%;
         margin: 60px 0px;
-    }
-    .wrapper {
-        padding: 0px 18px;
     }
 }
 

@@ -1,5 +1,5 @@
 <script>
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
         }
@@ -12,7 +12,7 @@ export default (await import('vue')).defineComponent({
     name: 'CardAdvantage',
     components: {
     }
-})
+}
 </script>
 
 <template>
@@ -35,13 +35,15 @@ export default (await import('vue')).defineComponent({
     gap: 16px;
     display: flex;
     justify-content: space-between;
-    width: 389px;
+    max-width: 389px;
 }
 
 .icon {
     box-sizing: border-box;
-    width: 60px;
-    height: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    min-height: 60px;
     border-radius: 8px;
     border: 1px solid var(--dived-hover, #E9E9E9);
     background-repeat: no-repeat;
@@ -75,7 +77,6 @@ export default (await import('vue')).defineComponent({
 @media (max-width: 1278px) {
     .CardAdvantage {
         margin-bottom: 0px;
-        width: calc(50% - 16px);
     }
 }
 

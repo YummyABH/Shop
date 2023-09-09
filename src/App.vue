@@ -4,9 +4,9 @@
   
 <script>
 
-export default (await import('vue')).defineComponent({
+export default {
 
-})
+}
 </script>
   
 <style></style>

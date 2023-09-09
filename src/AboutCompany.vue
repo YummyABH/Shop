@@ -1,22 +1,26 @@
 <script>
 import VueHeaderMain from './components/VueHeaderMain.vue'
-import CatalogAdvantages from './components/CatalogAdvantages.vue'
-import AllProducts from './components/AllProducts.vue'
-import VueFooter from './components/VueFooter.vue'
 import VueFeedback from './components/VueFeedback.vue'
+import VueFooter from './components/VueFooter.vue'
+import AboutUs from './components/AboutUs.vue'
+import Achievements from './components/Achievements.vue'
+import VueClients from './components/VueClients.vue'
+import OurInterest from './components/OurInterest.vue'
 
 export default {
     data() {
         return {
         }
     },
-    name: 'Catalog',
+    name: 'AboutCompany',
     components: {
         VueHeaderMain,
-        CatalogAdvantages,
-        AllProducts,
-        VueFooter,
+        AboutUs,
+        Achievements,
+        VueClients,
+        OurInterest,
         VueFeedback,
+        VueFooter,
     },
 }
 </script>
@@ -24,8 +28,10 @@ export default {
 <template>
     <VueHeaderMain/>
     <div class="wrapper">
-        <CatalogAdvantages/>
-        <AllProducts/>
+        <AboutUs/>
+        <Achievements/>
+        <VueClients/>
+        <OurInterest/>
         <VueFeedback/>
     </div>
     <VueFooter/>
@@ -35,10 +41,9 @@ export default {
 <style scoped>
 .wrapper {
     max-width: 1200px;
-    padding: 0px 40px;
     margin: 0 auto;
+    padding: 0px 40px;
 }
-
 @media (max-width: 1024px) {
     .wrapper {
         padding: 0px 72px;
@@ -46,11 +51,8 @@ export default {
 }
 
 @media (max-width: 768px) {
-
     .wrapper {
         padding: 0px 16px;
     }
 }
-
 </style>
-  

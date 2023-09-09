@@ -1,34 +1,35 @@
 <script>
 import VueHeaderMain from './components/VueHeaderMain.vue'
-import CatalogAdvantages from './components/CatalogAdvantages.vue'
-import AllProducts from './components/AllProducts.vue'
-import VueFooter from './components/VueFooter.vue'
+import VuePrewie from './components/VuePrewie.vue'
 import VueFeedback from './components/VueFeedback.vue'
+import VueFooter from './components/VueFooter.vue'
+import ProductInfo from './components/PorductIndo.vue'
 
 export default {
     data() {
         return {
         }
     },
-    name: 'Catalog',
+    name: 'ProductPage',
     components: {
         VueHeaderMain,
-        CatalogAdvantages,
-        AllProducts,
-        VueFooter,
+        VuePrewie,
+        ProductInfo,
         VueFeedback,
+        VueFooter,
     },
 }
 </script>
     
 <template>
-    <VueHeaderMain/>
+    <VueHeaderMain />
     <div class="wrapper">
-        <CatalogAdvantages/>
-        <AllProducts/>
-        <VueFeedback/>
+        <VuePrewie borderState="none" borderColor="#E9E9E9" textColor="#161616" background="#F4F5F8"
+            title="SG-006-1 Станок для разделки кабеля (Автоматический)" urlImg="/src/assets/Prewie/machine.jpg" />
+        <ProductInfo />
+        <VueFeedback />
     </div>
-    <VueFooter/>
+    <VueFooter />
 </template>
   
   
@@ -51,6 +52,4 @@ export default {
         padding: 0px 16px;
     }
 }
-
 </style>
-  

@@ -1,6 +1,6 @@
 <script>
 
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
             count: 0
@@ -9,29 +9,27 @@ export default (await import('vue')).defineComponent({
     name: 'VueFeedback',
     components: {
     }
-})
+}
 </script>
 
 <template>
     <div class="VueFeedback">
-        <div class="wrapper">
-            <!--------------Feedback-->
-            <div class="flex-container">
-                <div class="flex-item _info">
-                    <h1 class="title">Будем рады ответить на все интересующие вопросы</h1>
-                    <div class="subtitle">Оставьте заявку и мы вам вскоре позвоним и проконсультируем по всем интересующим
-                        вопросам</div>
-                </div>
-                <div class="flex-item">
-                    <form class="form" action="#" method="post">
-                        <div class="data">
-                            <input class="form-data _text" type="text" name="username" placeholder="Ваше имя">
-                            <input class="form-data _tel" type="tel" name="tel" placeholder="+ 7 (___) __ __">
-                            <input class="form-data _email" type="email" name="email" placeholder="E-mail (необязательно)">
-                        </div>
-                        <input class="form-submit" type="submit" value="Отправить">
-                    </form>
-                </div>
+        <!--------------Feedback-->
+        <div class="flex-container">
+            <div class="flex-item _info">
+                <h1 class="title">Будем рады ответить на все интересующие вопросы</h1>
+                <div class="subtitle">Оставьте заявку и мы вам вскоре позвоним и проконсультируем по всем интересующим
+                    вопросам</div>
+            </div>
+            <div class="flex-item">
+                <form class="form" action="#" method="post">
+                    <div class="data">
+                        <input class="form-data _text" type="text" name="username" placeholder="Ваше имя">
+                        <input class="form-data _tel" type="tel" name="tel" placeholder="+ 7 (___) __ __">
+                        <input class="form-data _email" type="email" name="email" placeholder="E-mail (необязательно)">
+                    </div>
+                    <input class="form-submit" type="submit" value="Отправить">
+                </form>
             </div>
         </div>
     </div>
@@ -41,12 +39,6 @@ export default (await import('vue')).defineComponent({
 .VueFeedback {
     width: 100%;
     margin: 120px 0px;
-}
-
-.wrapper {
-    max-width: 1200px;
-    padding: 0px 40px;
-    margin: 0 auto;
 }
 
 .flex-container {
@@ -107,6 +99,7 @@ export default (await import('vue')).defineComponent({
     border-bottom: 2px solid var(--text-light, #fff);
 
 }
+
 .form-submit {
     align-items: end;
     text-align: start;
@@ -117,9 +110,6 @@ export default (await import('vue')).defineComponent({
 }
 
 /*--------------@media запросы*/
-
-/*--------------1262px--------*/
-@media (max-width: 1278px) {}
 
 /*--------------1024px--------*/
 @media (max-width: 1024px) {
@@ -135,15 +125,11 @@ export default (await import('vue')).defineComponent({
         margin: 100px 0px;
     }
 
-    .wrapper {
-        padding: 72px;
-    }
-
     .flex-container {
         padding: 36px;
         gap: 40px;
     }
-    
+
 
 }
 
@@ -152,10 +138,6 @@ export default (await import('vue')).defineComponent({
     .VueFeedback {
         width: 100%;
         margin: 60px 0px;
-    }
-
-    .wrapper {
-        padding: 0px 18px;
     }
 }
 
@@ -180,8 +162,8 @@ export default (await import('vue')).defineComponent({
         font-size: 14px;
         line-height: 16px;
     }
-    
-    
+
+
 }
 
 /*--------------355px--------*/
@@ -191,12 +173,13 @@ export default (await import('vue')).defineComponent({
         padding: 12px;
         gap: 32px;
     }
+
     ._info {
         gap: 12px;
     }
+
     .data {
         gap: 8px;
         margin-bottom: 32px;
     }
-}
-</style>
+}</style>

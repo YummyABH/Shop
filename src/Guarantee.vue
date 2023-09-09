@@ -1,22 +1,20 @@
 <script>
 import VueHeaderMain from './components/VueHeaderMain.vue'
-import CatalogAdvantages from './components/CatalogAdvantages.vue'
-import AllProducts from './components/AllProducts.vue'
-import VueFooter from './components/VueFooter.vue'
+import GuaranteeItem from './components/GuaranteeItem.vue'
 import VueFeedback from './components/VueFeedback.vue'
+import VueFooter from './components/VueFooter.vue'
 
 export default {
     data() {
         return {
         }
     },
-    name: 'Catalog',
+    name: 'Guarantee',
     components: {
         VueHeaderMain,
-        CatalogAdvantages,
-        AllProducts,
-        VueFooter,
+        GuaranteeItem,
         VueFeedback,
+        VueFooter,
     },
 }
 </script>
@@ -24,8 +22,7 @@ export default {
 <template>
     <VueHeaderMain/>
     <div class="wrapper">
-        <CatalogAdvantages/>
-        <AllProducts/>
+        <GuaranteeItem/>
         <VueFeedback/>
     </div>
     <VueFooter/>
@@ -34,9 +31,12 @@ export default {
   
 <style scoped>
 .wrapper {
+    margin: 0 auto;
     max-width: 1200px;
     padding: 0px 40px;
-    margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
 }
 
 @media (max-width: 1024px) {
@@ -46,11 +46,8 @@ export default {
 }
 
 @media (max-width: 768px) {
-
     .wrapper {
         padding: 0px 16px;
     }
 }
-
 </style>
-  

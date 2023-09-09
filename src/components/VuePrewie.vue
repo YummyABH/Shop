@@ -1,60 +1,90 @@
 <script>
 
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
-            count: 0
         }
+    },
+    props: {
+        borderState: String,
+        borderColor: String,
+        textColor: String,
+        background: String,
+        title: String,
+        urlImg: String,
     },
     name: 'VuePrewie',
     components: {
     }
-})
+}
 </script>
 
 <template>
     <div class="VuePrewie">
-        <div class="wrapper">
-            <div class="card">
-                <div class="card__wrapper">
-                    <div class="card__container">
-                        <!-- Info -->
-                        <div class="info">
-                            <h1 class="title">Новый зверь для всех типов кабелей</h1>
-                            <div class="info__wrapper">
-                                <div class="info__item">
-                                    <div class="info__title">Диаметр обработки</div>
-                                    <div class="info__data">от 1,5 до 130мм </div>
-                                </div>
-                                <div class="info__item">
-                                    <div class="info__title">Размеры</div>
-                                    <div class="info__data">90*68*120 см</div>
-                                </div>
-                                <div class="info__item">
-                                    <div class="info__title">Мощность</div>
-                                    <div class="info__data">3 кВт 380 В</div>
-                                </div>
+        <div class="card" :style="{
+            backgroundColor: background,
+        }">
+            <div class="card__wrapper">
+                <div class="card__container" :style="{
+                    border: borderState,
+                }">
+                    <!-- Info -->
+                    <div class="info">
+                        <h1 class="title" :style="{
+                            color: textColor,
+                        }
+                            ">{{ title }}</h1>
+                        <div class="info__wrapper">
+                            <div class="info__item" :style="{
+                                borderBottomColor: borderColor,
+                            }
+                                ">
+                                <div class="info__title">Диаметр обработки</div>
+                                <div class="info__data">от 1,5 до 130мм </div>
                             </div>
-
-                            <div class="info__price">209 000 ₽</div>
+                            <div class="info__item" :style="{
+                                borderBottomColor: borderColor,
+                            }
+                                ">
+                                <div class="info__title">Размеры</div>
+                                <div class="info__data">90*68*120 см</div>
+                            </div>
+                            <div class="info__item" :style="{
+                                borderBottomColor: borderColor,
+                            }
+                                ">
+                                <div class="info__title">Мощность</div>
+                                <div class="info__data">3 кВт 380 В</div>
+                            </div>
                         </div>
 
-                        <!-- View-->
-                        <div class="view">
-                        </div>
-
+                        <div class="info__price" :style="{
+                            color: textColor,
+                            borderBottomColor: borderColor,
+                        }
+                            ">209 000 ₽</div>
                     </div>
 
-                    <div class="control">
-                        <a href="#" class="button-more">Подробнее</a>
+                    <!-- View-->
+                    <div class="view" :style="{
+                        backgroundImage: 'url(' + urlImg + ')',
+                    }
+                        ">
+                    </div>
 
-                        <div class="control__arrow">
-                            <div class="arrow">
-                                <div class="arrow-left"></div>
-                            </div>
-                            <div class="arrow">
-                                <div class="arrow-right"></div>
-                            </div>
+                </div>
+
+                <div class="control">
+                    <router-link to="/ProductPage" class="button-more">
+                        Подробнее
+                    </router-link>
+
+                    <div class="control__arrow">
+                        <div class="arrow">
+                            <div class="arrow-left"></div>
+                        </div>
+                        <div class="arrow">
+                            <div class="arrow-right"></div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +108,6 @@ export default (await import('vue')).defineComponent({
 .card {
     width: 100%;
     height: 560px;
-    background: var(--back-button);
     border-radius: 16px;
     padding: 0px;
 }
@@ -112,7 +141,6 @@ export default (await import('vue')).defineComponent({
     font-weight: 400;
     font-size: 40px;
     line-height: 48px;
-    color: var(--text-light);
     margin-bottom: 20px;
 }
 
@@ -125,7 +153,7 @@ export default (await import('vue')).defineComponent({
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #36383C;
+    border-bottom: 1px solid;
 }
 
 .info__title {
@@ -144,7 +172,6 @@ export default (await import('vue')).defineComponent({
 
 .info__price {
     padding-bottom: 32px;
-    border-bottom: 1px solid var(--dived-dafault);
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
@@ -154,7 +181,6 @@ export default (await import('vue')).defineComponent({
     line-height: 28px;
     letter-spacing: 0.01em;
     font-feature-settings: 'liga' off;
-    color: var(--text-light);
 }
 
 .view {
@@ -167,7 +193,6 @@ export default (await import('vue')).defineComponent({
 
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../assets/Prewie/machine.jpg);
     background-size: 91.6% auto;
 }
 
@@ -233,9 +258,6 @@ export default (await import('vue')).defineComponent({
         height: 92%;
     }
 
-    .view__item {
-        width: 95%;
-    }
     .info__price {
         border-bottom: none;
     }
@@ -299,20 +321,25 @@ export default (await import('vue')).defineComponent({
 /*--------------540px--------*/
 @media (max-width: 540px) {
     .view {
-        background-size: calc(100% - 24px) auto ;
+        background-size: calc(100% - 24px) auto;
     }
+
     .card {
         height: auto;
     }
+
     .wrapper {
         max-width: calc(100% - 36px);
     }
+
     .card__container {
         gap: 12px;
     }
+
     .control {
         margin-top: 12px;
     }
+
     .info__wrapper {
         max-width: calc(100% - 24px);
     }
@@ -321,6 +348,7 @@ export default (await import('vue')).defineComponent({
         font-size: 12px;
         line-height: 16px;
     }
+
     .info__price {
         font-size: 12px;
         line-height: 16px;
@@ -345,6 +373,7 @@ export default (await import('vue')).defineComponent({
         background-size: auto calc(100% - 15px);
         height: 170px;
     }
+
     .control__arrow {
         margin-right: 0px;
     }

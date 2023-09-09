@@ -1,7 +1,7 @@
 <script>
 import CardTool from './CardTool.vue'
 
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
         }
@@ -10,55 +10,35 @@ export default (await import('vue')).defineComponent({
     components: {
         CardTool,
     }
-})
+}
 </script>
 
 <template>
     <div class="VueVarieties">
-        <div class="wrapper">
-            <div class="title">Сепараторы, конвейеры, шнековые транспортеры и линии для переработки</div>
-            <div class="subtitle">Мы на связи всегда и разберемся с любыми вопросами возникшими во время эксплуатации нашего
-                оборудования.</div>
+        <div class="title">Сепараторы, конвейеры, шнековые транспортеры и линии для переработки</div>
+        <div class="subtitle">Мы на связи всегда и разберемся с любыми вопросами возникшими во время эксплуатации нашего
+            оборудования.</div>
 
-            <!--------------Varieties-->
-            <div class="flex-container">
+        <!--------------Varieties-->
+        <div class="flex-container">
 
-                <!--------------Item-->
-                <CardTool 
-                title="Станки для разделки кабеля" 
-                urlImg="/src/assets/Varieties/machine1.png" />
-                <CardTool 
-                title="Сепараторы" 
-                urlImg="/src/assets/Varieties/machine2.png" />
+            <!--------------Item-->
+            <CardTool title="Станки для разделки кабеля" urlImg="/src/assets/Varieties/machine1.png" />
+            <CardTool title="Сепараторы" urlImg="/src/assets/Varieties/machine2.png" />
 
-                <CardTool 
-                title="Станок для разделки теплообменников" 
-                urlImg="/src/assets/Varieties/machine3.png" />
+            <CardTool title="Станок для разделки теплообменников" urlImg="/src/assets/Varieties/machine3.png" />
 
-                <CardTool 
-                title="Разделка радиаторов" 
-                urlImg="/src/assets/Varieties/machine4.png" />
+            <CardTool title="Разделка радиаторов" urlImg="/src/assets/Varieties/machine4.png" />
 
-                <CardTool 
-                title="Запасные части" 
-                urlImg="/src/assets/Varieties/machine5.png" />
+            <CardTool title="Запасные части" urlImg="/src/assets/Varieties/machine5.png" />
 
-                <CardTool 
-                title="Другое" 
-                urlImg="/src/assets/Varieties/machine6.png" />
-                <!--------------Item End-->
-            </div>
+            <CardTool title="Другое" urlImg="/src/assets/Varieties/machine6.png" />
+            <!--------------Item End-->
         </div>
     </div>
 </template>
 
 <style scoped>
-.wrapper {
-    max-width: 1200px;
-    padding: 0px 40px;
-    margin: 0 auto;
-}
-
 .VueVarieties {
     width: 100%;
     margin: 120px 0px;

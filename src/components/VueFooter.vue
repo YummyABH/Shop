@@ -1,17 +1,16 @@
 <script>
 import Logo from './Logo.vue'
 
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
-            count: 0
         }
     },
     name: 'VueFooter',
     components: {
         Logo,
     }
-})
+}
 </script>
 
 <template>
@@ -87,7 +86,7 @@ export default (await import('vue')).defineComponent({
 }
 
 .footer {
-    padding: 24px 40px;
+    padding: 24px 0px;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -244,18 +243,15 @@ export default (await import('vue')).defineComponent({
 }
 /*--------------@media запросы*/
 
-/*--------------1262px--------*/
-@media (max-width: 1278px) {}
-
 /*--------------1024px--------*/
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 0px 72px;
+    }
+}
 
 /*--------------900px--------*/
 @media (max-width: 900px) {
-
-    .wrapper {
-        padding: 72px;
-    }
     .main {
         flex-wrap: wrap;
         gap: 62px;
@@ -266,38 +262,37 @@ export default (await import('vue')).defineComponent({
     }
 }
 
-/*--------------660px--------*/
-@media (max-width: 660px) {
-
+@media (max-width: 768px) {
     .wrapper {
-        padding: 0px 18px;
+        padding: 0px 16px;
     }
 }
 
 /*--------------540px--------*/
 @media (max-width: 540px) {
+    .networks {
+        flex-wrap: wrap;
+    }
     .address-title {
         font-size: 18px;
-line-height: 24px;
+        line-height: 24px;
     }
     .address-email {
         font-size: 18px;
-line-height: 24px;
+        line-height: 24px;
     }
 
     .address-tel {
         font-size: 18px;
-line-height: 24px;
+        line-height: 24px;
     }
 
     .footer-top {
         height: 60px;
     }
     .address {
+        width: auto;
         height: 312px;
     }
 }
-
-/*--------------355px--------*/
-@media (max-width: 355px) {}
 </style>

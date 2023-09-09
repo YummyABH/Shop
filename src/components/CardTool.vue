@@ -1,5 +1,5 @@
 <script>
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
         }
@@ -11,7 +11,7 @@ export default (await import('vue')).defineComponent({
     name: 'CardTool',
     components: {
     },
-})
+}
 </script>
 
 <template>

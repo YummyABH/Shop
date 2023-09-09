@@ -1,6 +1,6 @@
 <script>
 
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
             count: 0
@@ -9,7 +9,7 @@ export default (await import('vue')).defineComponent({
     name: 'Logo',
     components: {
     }
-})
+}
 </script>
 
 <template>
