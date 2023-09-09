@@ -25,7 +25,7 @@ export default {
     <VueHeaderMain />
     <div class="wrapper">
         <VuePrewie borderState="none" borderColor="#E9E9E9" textColor="#161616" background="#F4F5F8"
-            title="SG-006-1 Станок для разделки кабеля (Автоматический)" urlImg="/src/assets/Prewie/machine.jpg" />
+            title="SG-006-1 Станок для разделки кабеля (Автоматический)" urlImg="/Shop/assets/machine.jpg" />
         <ProductInfo />
         <VueFeedback />
     </div>
