@@ -23,7 +23,7 @@ export default {
         <div class="flex-container">
 
             <!--------------Item-->
-            <CardTool title="Станки для разделки кабеля" urlImg="/src/assets/Varieties/machine1.png" />
+            <CardTool title="Станки для разделки кабеля" urlImg="/Shop/assets/machine1.png" />
             <CardTool title="Сепараторы" urlImg="/src/assets/Varieties/machine2.png" />
 
             <CardTool title="Станок для разделки теплообменников" urlImg="/src/assets/Varieties/machine3.png" />
