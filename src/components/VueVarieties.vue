@@ -26,7 +26,7 @@ export default (await import('vue')).defineComponent({
                 <!--------------Item-->
                 <CardTool 
                 title="Станки для разделки кабеля" 
-                urlImg="/src/assets/Varieties/machine1.png" />
+                urlImg="/Shop/assets/machine1.png" />
                 <CardTool 
                 title="Сепараторы" 
                 urlImg="/src/assets/Varieties/machine2.png" />
