@@ -16,9 +16,10 @@ export default {
 
 <template>
     <div class="CardTool">
-        <div class="item-title">{{ title }}</div>
+{{ urlImg }}
+        
         <div class="item-img" :style="{
-            backgroundImage: 'url(' + urlImg + ')'
+            backgroundImage: 'url(' + urlImg+ ')'
         }"></div>
     </div>
 </template>

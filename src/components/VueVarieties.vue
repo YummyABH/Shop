@@ -24,11 +24,11 @@ export default {
 
             <!--------------Item-->
             <CardTool title="Станки для разделки кабеля" urlImg="/Shop/assets/machine1.png" />
-            <CardTool title="Сепараторы" urlImg="/src/assets/Varieties/machine2.png" />
+            <CardTool title="Сепараторы" urlImg="@assets/Varieties/machine2.png" />
 
             <CardTool title="Станок для разделки теплообменников" urlImg="/src/assets/Varieties/machine3.png" />
 
-            <CardTool title="Разделка радиаторов" urlImg="/src/assets/Varieties/machine4.png" />
+            <CardTool title="Разделка радиаторов" urlImg="../assets/Varieties/machine4.png" />
 
             <CardTool title="Запасные части" urlImg="/src/assets/Varieties/machine5.png" />
 
