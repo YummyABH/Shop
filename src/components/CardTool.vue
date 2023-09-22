@@ -1,5 +1,5 @@
 <script>
-export default (await import('vue')).defineComponent({
+export default {
     data() {
         return {
         }
@@ -11,15 +11,13 @@ export default (await import('vue')).defineComponent({
     name: 'CardTool',
     components: {
     },
-})
+}
 </script>
 
 <template>
     <div class="CardTool">
         <div class="item-title">{{ title }}</div>
-        <div class="item-img" :style="{
-            backgroundImage: 'url(' + urlImg + ')'
-        }"></div>
+        <slot></slot>
     </div>
 </template>
 
