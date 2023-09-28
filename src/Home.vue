@@ -29,7 +29,9 @@ export default {
     textColor="#FFF"
     background="#202226"
     title="Новый зверь для всех типов кабелей"
-    urlImg="/src/assets/Prewie/machine.jpg" />
+    >
+    <img src="./assets/img/firm.png" alt="">
+    </VuePrewie>
     <VueVarieties />
     <VueAdvantages />
     <VueClients />

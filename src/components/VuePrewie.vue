@@ -66,12 +66,7 @@ export default {
                     </div>
 
                     <!-- View-->
-                    <div class="view" :style="{
-                        backgroundImage: 'url(' + urlImg + ')',
-                    }
-                        ">
-                    </div>
-
+                    <slot class="view"></slot>
                 </div>
 
                 <div class="control">
